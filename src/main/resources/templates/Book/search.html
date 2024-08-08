@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search book</title>
+</head>
+
+<body>
+
+<div th:each="book : ${books}" >
+    <a th:href="@{/books/{id}(id=${book.getBook_id()})}" th:text="${book.getName()} + ', ' + ${book.getAuthor()} + ' ' + ${book.getYear()}"> f</a>
+</div>
+
+<form th:method="post" th:action="@{/books/search}" th:object="${name}">
+    <label for="name">Введи название: </label>
+    <input type="text" id="name" th:field="*{name}">
+    <br>
+    <input type="submit" value="Search!">
+</form>
+<p th:text="${name.getName()}">dfg</p>
+
+</body>
+
+</html>

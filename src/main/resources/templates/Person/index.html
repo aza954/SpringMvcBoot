@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="person : ${people}" >
+    <a th:href="@{/people/{id}(id=${person.getUser_id()})}" th:text="${person.getFullname()} + ', ' + ${person.getAge()}"> f</a>
+</div>
+<a th:href="@{/people/new}">Создать нового</a>
+</body>
+</html>

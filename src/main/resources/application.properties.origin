@@ -1,0 +1,13 @@
+spring.application.name=SpringMvcBoot
+
+spring.datasource.driver-class-name=
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
+
+
+spring.jpa.properties.hibernate.dialect=
+spring.jpa.properties.hibernate.show_sql=true
+
+spring.mvc.hiddenmethod.filter.enabled=true
